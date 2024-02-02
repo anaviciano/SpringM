@@ -66,7 +66,7 @@ public class DriverRestController {
     //si no coincidiera, podríamos ponérselo con @PathVariable("codigo")
     @DeleteMapping("/drivers/{code}")
     public ResponseEntity<Driver> delete(@PathVariable String code){
-        this.driverService.deleteDriver(code);
+        this.driverService.deleteDriverByCode(code);
         //si has borrado el dato, ya no existe,
         // por lo que devuelves un estado de "ya no existe ese dato, porque lo has borrado"
         return ResponseEntity.noContent().build();

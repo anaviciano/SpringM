@@ -36,7 +36,7 @@ public class DriverServiceImpl implements DriverService{
 
     // Método para eliminar un driver por su código
     @Override
-    public void deleteDriver(String code) {
+    public void deleteDriverByCode(String code) {
         repository.deleteByCode(code);
     }
 

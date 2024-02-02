@@ -13,6 +13,6 @@ public interface DriverService {
     void saveDriver(Driver driver);
 
     // Método para eliminar un driver por su código
-    void deleteDriver(String code);
+    void deleteDriverByCode(String code);
 }
 

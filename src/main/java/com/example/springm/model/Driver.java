@@ -21,8 +21,8 @@ public class Driver {
     private String forename;
     private String surname;
 
-    //@JsonProperty("dateOfBirth")
-    //private LocalDate dob;
+    @JsonProperty("dateOfBirth")
+    private LocalDate dob;
 
     private String nationality;
     private String url;
