@@ -26,6 +26,23 @@ public class Driver {
 
     private String nationality;
     private String url;
+
+    /*
+    //Video Alan Introdución Spring JPA
+    public Driver(Long id, String code, String forename, String surname, LocalDate dob, String nationality, String url) {
+        this.id = id;
+        this.code = code;
+        this.forename = forename;
+        this.surname = surname;
+        this.dob = dob;
+        this.nationality = nationality;
+        this.url = url;
+    }
+
+    public Driver() {
+    }
+
+     */
 }
 
 
