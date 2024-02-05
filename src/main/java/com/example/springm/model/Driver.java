@@ -1,5 +1,6 @@
 package com.example.springm.model;
 
+import com.fasterxml.jackson.annotation.JsonIgnoreProperties;
 import com.fasterxml.jackson.annotation.JsonProperty;
 import jakarta.persistence.*;
 import lombok.Data;
@@ -26,6 +27,11 @@ public class Driver {
 
     private String nationality;
     private String url;
+
+    @ManyToOne
+    @JoinColumn(name = "constructorid")
+    @JsonIgnoreProperties("listaDrivers")
+    private Constructor constructor;
 
     /*
     //Video Alan Introdución Spring JPA
