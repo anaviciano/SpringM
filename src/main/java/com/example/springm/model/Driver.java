@@ -30,6 +30,7 @@ public class Driver {
 
     @ManyToOne
     @JoinColumn(name = "constructorid")
+    //si no ponemos esta etiqueta, tendremos un bucle infinito
     @JsonIgnoreProperties("listaDrivers")
     private Constructor constructor;
 

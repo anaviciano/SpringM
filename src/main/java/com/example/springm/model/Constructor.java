@@ -25,6 +25,6 @@ public class Constructor {
 
     private String url;
 
-    @OneToMany(mappedBy = "constructor", cascade = CascadeType.ALL)
+    @OneToMany(mappedBy = "constructor", cascade = {CascadeType.MERGE, CascadeType.PERSIST})
     private List<Driver> listaDrivers;
 }
