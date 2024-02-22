@@ -4,12 +4,17 @@ import com.example.springm.model.Driver;
 import com.example.springm.service.DriverService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.ResponseEntity;
+import org.springframework.stereotype.Controller;
+import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.*;
 
 import java.util.List;
 import java.util.Optional;
 
-@RestController
+//para trabajar con APIs, RestController
+//@RestController
+//para trabajar con vistas y mostrar una tabla con los drivers, @Controller
+@Controller
 @RequestMapping("/api")
 public class DriverRestController {
     private final DriverService driverService;
@@ -70,6 +75,13 @@ public class DriverRestController {
         //si has borrado el dato, ya no existe,
         // por lo que devuelves un estado de "ya no existe ese dato, porque lo has borrado"
         return ResponseEntity.noContent().build();
+    }
+
+    @GetMapping({"/drivers/listarDrivers"})
+    public String listarDrivers(Model model){
+        model.addAttribute("drivers", driverService.listarDrivers());
+        model.addAttribute("titulo", "LISTA DE DRIVERS");
+        return "listarDrivers";
     }
 }
 

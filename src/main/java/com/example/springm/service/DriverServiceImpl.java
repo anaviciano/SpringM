@@ -40,5 +40,11 @@ public class DriverServiceImpl implements DriverService{
         repository.deleteByCode(code);
     }
 
+    @Override
+    public List<Driver> listarDrivers() {
+        //Save se encarga de registra los datos.
+        return repository.findAll();
+    }
+
 }
 

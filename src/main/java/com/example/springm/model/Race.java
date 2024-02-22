@@ -30,7 +30,7 @@ public class Race {
 
     //@JsonManagedReference
     @OneToOne(cascade = {CascadeType.MERGE, CascadeType.PERSIST})
-    @JoinColumn(name = "circuitid")
+    //@JoinColumn(name = "circuitid")
     //si no ponemos esta etiqueta, tendremos un bucle infinito
     @JsonIgnoreProperties("race")
     private Circuit circuit;

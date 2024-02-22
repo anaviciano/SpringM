@@ -14,5 +14,7 @@ public interface DriverService {
 
     // Método para eliminar un driver por su código
     void deleteDriverByCode(String code);
+
+    public List<Driver> listarDrivers();
 }
 

@@ -29,7 +29,7 @@ public class Circuit {
 
     //@JsonBackReference
     @OneToOne(mappedBy = "circuit", cascade = {CascadeType.PERSIST, CascadeType.MERGE})
-    //@JsonIgnoreProperties("circuit")
+    @JsonIgnoreProperties("circuit")
     private Race race;
 
 }

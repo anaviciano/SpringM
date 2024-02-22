@@ -8,7 +8,7 @@ import java.util.Optional;
 public interface CircuitService {
     List<Circuit> getAllCircuits();
 
-    Optional<Circuit> getCircuitByCircuitref(String circuitref);
+    Optional<Circuit>   getCircuitByCircuitref(String circuitref);
 
     void saveCircuit(Circuit circuit);
     void deleteCircuitByCircuitref(String circuitref);
